@@ -69,6 +69,3 @@ The architecture of the implemented model provides sufficient details of the cha
 The README describes how the model was trained and what the characteristics of the dataset are. Information such as how the dataset was generated and examples of images from the dataset must be included.
 
 The training process is properly described in the README, great job!
-Simulation
-
-No tire may leave the drivable portion of the track surface. The car may not pop up onto ledges or roll over any surfaces that would otherwise be considered unsafe (if humans were in the vehicle).
