@@ -5,11 +5,11 @@
 Project behavioral cloning was quite a challenge. It provide me chance to learn so much about deep learning, neural networks (LeNet, Alexnet, NVIDIA, VGG, commai approach, etc.), Keras and TensorFlow. I am sure that knowledge gained from these lessons will never be the same without project Behavioral Cloning. This amazing project force me to gather all information which I have previously learned, force me to work harder, even smarter.
 
 ## Submitted Files
-model.py – the main file (reading data, pre-processing, NN architecture and saving the model),
-drive.py – this is original file, without changes,
-model.h5 – file where is saved my model,
-writeup report – this document,
-video.mp4 – video file with one full lap.
+- model.py – the main file (reading data, pre-processing, NN architecture and saving the model),
+- drive.py – this is original file, without changes,
+- model.h5 – file where is saved my model,
+- writeup report – this document,
+- video.mp4 – video file with one full lap.
 
 ## Data Collection
 I run simulator model in training mode. I have chosen the lowest resolution, 320x240, and quality of video was: fastest. I decide to collect two groups of data: mydata_small which consists of training set of the one lap, and mydata_big which consists of three laps of collecting images for training set. Data was collected in directorium: /Users/Jelena/CarND-Behavioral-Cloning-P3/mydata_small/ and ../mydata_big/
@@ -25,11 +25,15 @@ During development of the model I was following the lessons. As it was suggested
 ### Data Pre-processing
 For data pre-processing I used:
 - Normalization, using Lambda layer:
+
 model.add(Lambda(lambda x: (x / 255.0) - 0.5, input_shape=(160,320,3)))
 - Gaining additional set of images by flipping images by vertical:
+
 argumented_images.append(cv2.flip(image,1))
+
 argumented_measurements.append(measurement*-1.0)
 - Cropping picture, to remove sky, trees and part of the car on the bottom:
+
 model.add(Cropping2D(cropping=((70,25), (0,0))))
 
 ## Neural Network
